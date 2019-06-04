@@ -28,15 +28,17 @@ while True:
     if kb.is_pressed('1'):
         trigger=1
         auto.moveTo(newx0,newy0,0)
+    elif auto.position()[1] != newy0:
+        trigger=0
     
     if trigger is 1:
         if kb.is_pressed('left'):
-            if auto.position() == (newx0,newy0):
+            if auto.position()[0] == newx0:
                 auto.moveTo(newx0+(13*difference),newy0,0)
             else:
                 auto.move(0-difference,0)
         elif kb.is_pressed('right'):
-            if auto.position() == (newx0+(13*difference),newy0):
+            if auto.position()[0] == newx0+(13*difference):
                 auto.moveTo(newx0,newy0,0)
             else:
                 auto.move(difference,0)
