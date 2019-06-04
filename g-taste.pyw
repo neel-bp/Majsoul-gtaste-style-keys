@@ -11,10 +11,10 @@ x1, y1 = point1
 
 # calculing the factors and new points based on that factor and resolution of current display
 
-factorx0 = float(1920/x0)
-factory0 = float(1080/y0)
-factorx1 = float(1920/x1)
-factory1 = float(1080/y1)
+factorx0 = 1920/x0
+factory0 = 1080/y0
+factorx1 = 1920/x1
+factory1 = 1080/y1
 width, height = auto.size() # current resolution
 
 newpoint0 = (width/factorx0, height/factory0)
