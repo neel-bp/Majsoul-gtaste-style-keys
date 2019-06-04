@@ -1,4 +1,3 @@
-# push pull taste
 import keyboard as kb
 import pyautogui as auto
 
